@@ -3,7 +3,8 @@
   padding-bottom: 0;
 }
 
-.footer-title {
+.footer p {
+  margin: 0;
   font-family: $arial;
   font-size: 85px;
   font-weight: normal;
@@ -18,7 +19,7 @@
     padding: 5px 0 0;
   }
 
-  .footer-title {
+  .footer p {
     font-size: 45px;
     line-height: 85%;
   }

@@ -3,7 +3,8 @@
   padding: 5px 0 40px;
 }
 
-.header-title {
+.header p {
+  margin: 0;
   font-family: $arial;
   font-size: 85px;
   font-weight: normal;
@@ -18,7 +19,7 @@
     padding: 5px 0 82px;
   }
 
-  .header-title {
+  .header p {
     font-size: 45px;
     line-height: 75%;
   }
@@ -29,7 +30,7 @@
     padding: 0 0 102px;
   }
 
-  .header-title {
+  .header p {
     font-size: 20px;
     line-height: 100%;
   }
