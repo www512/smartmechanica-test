@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Arial"),
+    url("../fonts/Arial.woff2") format("woff2"),
+    url("../fonts/Arial.woff") format("woff");
+}
+
+body {
+  min-width: 355px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  color: #000000;
+  background-color: $white;
+}

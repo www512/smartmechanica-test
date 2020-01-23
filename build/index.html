@@ -3,11 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SmartMechanica test">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>SmartMechanica test</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/arial.woff2" as="font">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="header">
+    <a class="header-title" href="index.html">header</a>
+  </header>
+  <main class="main">
+    <h1>SmartMechanica test</h1>
+    <div class="left-menu">
+      <h2>Меню</h2>
+      <ul class="main-list">
+        <li class="main-item">Список1</li>
+        <li class="main-item">Список2</li>
+        <li class="main-item">Список3</li>
+      </ul>
+    </div>
+    <div class="buy">
+      <picture>
+        <source type="image/webp" srcset="img/webp/car@1x.webp 1x, img/webp/car@2x.webp 2x">
+        <!-- 1х: 576px; 2x: 1152px -->
+        <img class="buy-image" src="img/car@1x.jpg" srcset="img/car@2x.jpg 2x" alt="Car">
+      </picture>
+      <form class="buy-form" action="/echo" method="get">
+        <p><span class="buy-form__coast">$500000</span> <input class="buy-btn" type="submit" value="Купить"> cente fcenterce ntercente centercenter center&nbsp;centercenter
+        </p><p>center&nbsp;center&nbsp;center <span class="buy-form__mini">по поводу мелко и неудобно=)</span></p>
+        <input type="text" size="20">
+      </form>
+    </div>
+    <div class="right-menu">
+      <h2>right</h2>
+    </div>
+  </main>
+  <footer class="footer">
+    <a class="footer-title" href="index.html">footer</a>
+  </footer>
 </body>
 </html>
