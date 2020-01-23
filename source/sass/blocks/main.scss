@@ -178,6 +178,16 @@
     background-color: #fac552;
     border: none;
     border-radius: 5px;
+
+    &:hover,
+    &:focus {
+      background-color: #ffe1a0;
+      outline: none;
+    }
+
+    &:active {
+      background-color: #fac552;
+    }
   }
 
   .buy-form__mini {
