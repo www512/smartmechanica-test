@@ -150,7 +150,7 @@
   }
 
   .buy {
-    padding: 18px 18px 5px;
+    padding: 18px 18px 18px;
   }
 
   .buy-image {
@@ -188,6 +188,12 @@
     &:active {
       background-color: #fac552;
     }
+  }
+
+  .buy input {
+    width: 170px;
+    font-size: 18px;
+    line-height: 100%;
   }
 
   .buy-form__mini {

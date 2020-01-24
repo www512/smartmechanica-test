@@ -24,3 +24,9 @@
     line-height: 85%;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .footer p {
+    display: none;
+  }
+}
