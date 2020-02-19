@@ -1,12 +1,21 @@
 .main {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
   grid-template-columns: 1fr 2fr 1fr;
-  align-items: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-grid-rows: -webkit-max-content;
+  -ms-grid-rows: max-content;
+  grid-template-rows: -webkit-max-content;
   grid-template-rows: max-content;
-  grid-template-areas: "left buy right";
+      grid-template-areas: "left buy right";
 }
 
 .left-menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   background-color: #777777;
   grid-area: left;
 }
@@ -21,13 +30,13 @@
   color: $black;
 }
 
-.main-list {
+.main-menu__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.main-item {
+.main-menu__item {
   font-family: $arial;
   font-size: 20px;
   line-height: 100%;
@@ -37,7 +46,11 @@
 }
 
 .buy {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: minmax(159px, 60%) minmax(224px, 40%);
   grid-template-columns: minmax(159px, 60%) minmax(224px, 40%);
   background-color: #ededed;
   grid-area: buy;
@@ -51,7 +64,8 @@
 
 .buy-form {
   padding: 0 10px 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .buy-btn {
@@ -78,6 +92,8 @@
 }
 
 .right-menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: right;
   background-color: #888888;
 }
@@ -94,8 +110,9 @@
 
 @media (max-width: $laptop-width) {
   .main {
+    -ms-grid-columns: minmax(150px, 1fr) 3fr;
     grid-template-columns: minmax(150px, 1fr) 3fr;
-    grid-template-areas:
+        grid-template-areas:
       "right buy"
       "left buy";
   }
@@ -116,12 +133,26 @@
   .buy p {
     letter-spacing: 1.4px;
   }
+  .left-menu {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .buy {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+  }
+  .right-menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
 }
 
 @media (max-width: $mobile-width) {
   .main {
+    -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
-    grid-template-areas:
+        grid-template-areas:
       "right"
       "left"
       "buy";
@@ -143,9 +174,7 @@
     color: $white;
   }
 
-  .main-list {
-    margin: 0;
-    padding: 0;
+  .main-menu__list {
     list-style: disc;
   }
 
@@ -159,7 +188,9 @@
   }
 
   .buy p {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     font-size: 15px;
   }
@@ -203,5 +234,18 @@
     font-size: 40px;
     line-height: 95%;
     background-color: $white;
+  }
+  .left-menu {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .buy {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .right-menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
   }
 }
